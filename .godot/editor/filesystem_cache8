@@ -1,0 +1,26 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1723647296
+Blender Scene - GameDev.tv Winter Pack.glb::PackedScene::1788385937344748380::1723218340::1723218341::1::::<><>::
+blue-clouds-day-fluffy-53594.jpeg::CompressedTexture2D::1726492225235861599::1723219003::1723219008::1::::<><>::
+GeneratedRock.gd::GDScript::-1::1723518909::0::1::::<>RigidBody3D<>::
+generated_rock.tscn::PackedScene::4314280569216814989::1723578663::0::1::::<><>::res://GeneratedRock.gd
+icon.svg::CompressedTexture2D::487742420170054376::1723142386::1723142416::1::::<><>::
+rigid_body_3d2.tscn::PackedScene::4290824164193605814::1723578663::0::1::::<><>::uid://b5apv73kbqbu5::::res://rock_2_diff_4k.jpg
+rigid_body_3d.tscn::PackedScene::3516989641569096844::1723578663::0::1::::<><>::
+rock.gd::GDScript::-1::1723231730::0::1::::Rock<>RigidBody3D<>::
+rock.tscn::PackedScene::9038519476442866247::1723578663::0::1::::<><>::res://rock.gd
+rock_2.gd::GDScript::-1::1723517569::0::1::::<>RigidBody3D<>::
+rock_2.tscn::PackedScene::1618234182568972584::1723578663::0::1::::<><>::res://rock_2.gd
+rock_2_diff_4k.jpg::CompressedTexture2D::4493035973855621914::1723578262::1723578297::1::::<><>::
+stones.glb::PackedScene::8394106593332937549::1723257257::1723257260::1::::<><>::uid://cqmudl4c0td2n::::res://stones_stones_baseColor.png<>uid://cka76bf1rm7ox::::res://stones_stones_normal.png
+stones_ao.png::CompressedTexture2D::3694841255055577382::1723257269::1723257269::1::::<><>::
+stones_baseColor.png::CompressedTexture2D::8625745891977507515::1723257269::1723578057::1::::<><>::
+stones_cavity.png::CompressedTexture2D::2043413393147076822::1723257269::1723257270::1::::<><>::
+stones_normal.png::CompressedTexture2D::2042608553282564641::1723257269::1723257270::1::::<><>::
+stones_stones_baseColor.png::CompressedTexture2D::5921855718561691607::1723257259::1723257261::1::::<><>::
+stones_stones_normal.png::CompressedTexture2D::5476728168598024675::1723257257::1723257261::1::::<><>::
+stone_1.glb::PackedScene::160758794327472367::1723519303::1723519319::1::::<><>::
+stone_1.tscn::PackedScene::8495333939969550514::1723518428::0::1::::<><>::uid://cj4w58hiycd8::::res://stone_1.glb
+stone_2.glb::PackedScene::7634135851568820377::1723519681::1723519685::1::::<><>::
+world.gd::GDScript::-1::1723578661::0::1::::<>Node3D<>::
+world.tscn::PackedScene::3494328302451239385::1723578663::0::1::::<><>::res://world.gd<>uid://d11ldidbajpgx::::res://rock.tscn

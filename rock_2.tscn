@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://xb5c0ele7ah1"]
+
+[ext_resource type="Script" path="res://rock_2.gd" id="1_4du0t"]
+
+[node name="Rock2" type="RigidBody3D"]
+script = ExtResource("1_4du0t")
