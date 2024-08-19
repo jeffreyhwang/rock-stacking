@@ -7,7 +7,7 @@ const GENERATED_ROCK = preload("res://generated_rock.tscn")
 const ROCK_2 = preload("res://rock_2.tscn")
 const RIGID_BODY_3D = preload("res://rigid_body_3d.tscn")
 const RIGID_BODY_3D_2 = preload("res://rigid_body_3d2.tscn")
-@onready var camera_3d: Camera3D = $Camera3D
+@onready var camera_3d = $CameraPivot/Camera3D
 @onready var camera_pivot: Node3D = $CameraPivot
 
 func drop_all_rocks():
@@ -24,12 +24,20 @@ func _input(event) -> void:
 		control_rock.angular_velocity.x = event.relative.y
 
 func _unhandled_input(event):
-	if (control_rock != null):
+	if (control_rock != null && Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) && event is InputEventMouseMotion):
 		var mouse_pos = get_viewport().get_mouse_position()
-		control_rock.global_position.x = get_global_mouse_position().position.x
-		control_rock.global_position.y = 2
-		print("control_rock pos " + str(control_rock.global_position))
-
+		var movement = Vector3(event.relative.x, 0, event.relative.y)
+		control_rock.apply_impulse(movement * .05)
+		print("control_rock pos " + str(control_rock.position))
+	if (event is InputEventMouseButton && Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_DOWN)):
+		var movement = Vector3(0, -event.factor, 0)
+		control_rock.apply_impulse(movement * .1)
+	if (event is InputEventMouseButton && Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_UP)):
+		var movement = Vector3(0, event.factor, 0)
+		control_rock.apply_impulse(movement * .1)
+	if (event is InputEventMouseMotion && Input.is_mouse_button_pressed(MOUSE_BUTTON_MIDDLE)):
+		camera_pivot.rotation.y = lerp_angle(camera_pivot.rotation.y, camera_pivot.rotation.y - deg_to_rad(event.relative.x), 1)
+		camera_pivot.rotation.x = lerp_angle(camera_pivot.rotation.x, camera_pivot.rotation.x - deg_to_rad(event.relative.y), 1)
 
 func _process(delta: float) -> void:
 	if (Input.is_action_pressed("camera_down")):
