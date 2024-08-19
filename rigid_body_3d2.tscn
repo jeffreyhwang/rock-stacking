@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2erinvrjgk4u"]
+[gd_scene load_steps=8 format=3 uid="uid://b2erinvrjgk4u"]
 
 [ext_resource type="Texture2D" uid="uid://b5apv73kbqbu5" path="res://rock_2_diff_4k.jpg" id="1_1am65"]
+[ext_resource type="Script" path="res://rigid_body_3d2.gd" id="1_qi56s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgytr"]
 albedo_texture = ExtResource("1_1am65")
@@ -41,6 +42,8 @@ shadow_mesh = SubResource("ArrayMesh_76cxl")
 points = PackedVector3Array(0.723592, -0.447309, 0.525646, 0.587699, -0.000102937, 0.808927, 0.262801, -0.525738, 0.808927, 0.723592, -0.447309, -0.525842, 0.68802, 0.525635, -0.500196, -0.262904, 0.525635, 0.808927, -0.000133514, -0.000102937, 1, -0.27651, -0.447309, 0.850626, -0.894504, -0.447309, -0.000195861, -0.27651, -0.447309, -0.850822, 0.587699, -0.000102937, -0.809123, 0.276243, 0.447206, -0.850822, -0.262904, 0.525635, -0.809123, -0.723695, 0.447206, 0.525646, -0.587966, -0.000102937, 0.808927, -0.951058, -0.000102937, 0.308927, -0.951058, -0.000102937, -0.309123, -0.587966, -0.000102937, -0.809123, -0.000133514, -0.000102937, -1, -0.723695, 0.447206, -0.525842)
 
 [node name="RigidBody3D" type="RigidBody3D"]
+max_contacts_reported = 1
+script = ExtResource("1_qi56s")
 
 [node name="Icosphere" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_bgytr")
